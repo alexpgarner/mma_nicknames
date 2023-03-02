@@ -15,7 +15,7 @@ let mma_nicknames = {
         'disipline' : "free style wrestler"
     },
 
-    'nigerian nightmare' : {
+    'the nigerian nightmare' : {
         'name': 'Kamaru Usman',
         'age' : "34",
         'weight': "210 Ibs",
@@ -63,7 +63,7 @@ app.get('/api/:nickname',(request,response)=>{
     if(mma_nicknames[nickname]){
         response.json(mma_nicknames[nickname]);
     }else{
-        response.json(mma_nickname['unknown']);
+        response.json(mma_nicknames['unknown']);
     }
 })
 
