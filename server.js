@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 8000;
+
+app.use(cors());
 
 let mma_nicknames = {
     'bones' : {
@@ -48,6 +51,9 @@ let mma_nicknames = {
         'disipline' : "unknown"
     }
 }
+
+
+
 app.get('/',(request,response)=>{
     response.sendFile(__dirname + '/index.html');
 });
